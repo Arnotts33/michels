@@ -1,0 +1,15 @@
+:root {
+	/* Base colors */
+	--color-background: #fcfbf7;
+	--color-text: #4a574c;
+	--color-heading: #4e6551;
+
+	/* Semantic colors */
+	--color-primary: #4e6551;
+	--color-white: #ffffff;
+	--color-black: #000000;
+
+	/* Typography */
+	--font-heading: "Playfair Display", serif;
+	--font-body: "Inter", sans-serif;
+}

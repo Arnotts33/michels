@@ -1,7 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const obj = {
+  title: 'Hello World',
+  description: 'This is a simple Astro page.',
+};
 ---
 
 <Layout>
-	<h1>Hello Wordl!</h1>
+	<h1>Hello World!</h1>
+  <p>{obj.description}</p>
 </Layout>
