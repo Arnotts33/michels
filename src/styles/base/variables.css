@@ -9,6 +9,10 @@
 	--color-white: #ffffff;
 	--color-black: #000000;
 
+	/* UI colors */
+	--color-border: #a3b7a6;
+	--color-icons: #a3b7a6;
+
 	/* Typography */
 	--font-heading: "Playfair Display", serif;
 	--font-body: "Inter", sans-serif;
