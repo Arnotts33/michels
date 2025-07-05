@@ -19,7 +19,6 @@
 
 	ul {
 		list-style: none;
-		flex-shrink: 0;
 		min-width: 100%;
 		display: flex;
 		justify-content: space-between;
