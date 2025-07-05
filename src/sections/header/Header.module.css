@@ -5,6 +5,11 @@
 	padding: 1.5rem;
 	z-index: 10;
 
+	@media (width < 1024px) {
+		width: 100%;
+		padding: 2rem;
+	}
+
 	.innerHeader {
 		display: flex;
 		align-items: center;
@@ -17,5 +22,9 @@
 
 	img {
 		width: 132px;
+
+		@media (width < 1024px) {
+			width: clamp(5rem, 3.2353rem + 7.8431vw, 8.25rem);
+		}
 	}
 }
