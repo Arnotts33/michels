@@ -1,13 +1,20 @@
 .header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	width: 50%;
 	position: fixed;
 	top: 0;
-	padding: 1.5rem 3rem;
-	background-color: var(--color-background);
-	border: 3px solid var(--color-border);
-	border-radius: 0.5rem;
-	width: calc(50% - 4rem);
-	margin: 2rem;
+	padding: 1.5rem;
+
+	.innerHeader {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: var(--color-background);
+		border: 3px solid var(--color-border);
+		border-radius: 0.5rem;
+		padding: 1rem 2rem;
+	}
+
+	img {
+		width: 132px;
+	}
 }

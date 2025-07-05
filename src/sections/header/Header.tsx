@@ -1,10 +1,9 @@
-import Image from "astro/components/Image.astro";
 import styles from "./Header.module.css";
 
 const Header = () => {
 	return (
 		<header className={styles.header}>
-			<div>
+			<div className={styles.innerHeader}>
 				<a href="/">
 					<img
 						src="/src/assets/images/logo/michels-logo.svg"

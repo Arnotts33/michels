@@ -1,0 +1,27 @@
+.about {
+	height: 100svh;
+	width: 50%;
+	padding: 0.5rem;
+}
+
+.aboutContainer {
+	height: 100%;
+	border: 3px solid var(--color-border);
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.aboutTitle {
+	/* font-size: 7.5rem; */
+	/* font-size: 13.25rem; */
+	font-size: clamp(7.5rem, 0.1137rem + 8.207vw, 13.25rem);
+	font-weight: 700;
+	line-height: 1.5;
+	text-transform: uppercase;
+	margin-block: 1.5rem;
+	width: 100%;
+	text-align: center;
+	text-box-trim: trim-both;
+	text-box-edge: cap alphabetic;
+}

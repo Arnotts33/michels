@@ -5,10 +5,38 @@ import heroImage from '../../assets/images/hero-img.webp';
 ---
 <section class={styles.hero}>
   <div class={styles.left}>
-    <div class={styles.textContent}>
-      <h1 class={styles.heroTitle}>Bistrot de Quartier au coeur de Bordeaux St Pierre</h1>
+    <div class={styles.innerContainer}>
+      <div class={styles.heroMain}>
+        <h1 class={styles.heroTitle}>Bistrot de quartier au coeur de Bordeaux St Pierre</h1>
+        <div class={styles.buttonContainer}>
+          <a href="#" class={styles.linkButton}>Notre Carte</a>
+          <a href="#" class={styles.linkButton}>Venir Chez Nous</a>
+        </div>
+      </div>
+      <div class={styles.infoContainer}>
+        <div class={styles.infoInner}>
+          <div class={styles.adressContainer}>
+            <p>
+              15 rue du Pas-Saint-Georges
+            </p>
+            <p>
+              33000 Bordeaux
+            </p>
+          </div>
+
+          <hr>
+
+          <div class={styles.hoursContainer}>
+            <p class={styles.days}>
+              Ouvert 7J/7
+            </p>
+            <p class={styles.hours}>
+              8h00 - 00h00
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
   <div class={styles.right}>
     <div class={styles.imageContainer}>
       <Image
