@@ -1,7 +1,6 @@
 ---
 import styles from './Hero.module.css';
-import { Image } from 'astro:assets';
-import heroImage from '../../assets/images/hero-img.webp';
+const heroImage = "src/assets/images/hero-img.webp";
 ---
 <section class={styles.hero}>
   <div class={styles.left}>
@@ -39,7 +38,7 @@ import heroImage from '../../assets/images/hero-img.webp';
     </div>
   <div class={styles.right}>
     <div class={styles.imageContainer}>
-      <Image
+      <img
       src={heroImage}
       class={styles.heroImage}
       alt="Hero Image"
