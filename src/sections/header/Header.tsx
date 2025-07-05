@@ -6,7 +6,7 @@ const Header = () => {
 			<div className={styles.innerHeader}>
 				<a href="/">
 					<img
-						src="/src/assets/images/logo/michels-logo.svg"
+						src="/assets/images/logo/michels-logo.svg"
 						alt="Bistrot Michel's Logo"
 					/>
 				</a>
