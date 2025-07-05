@@ -1,10 +1,24 @@
 ---
 import styles from './About.module.css';
-import { Image } from 'astro:assets';
+const menuImg = 'assets/images/menu-michels.webp';
+// import { Image } from 'astro:assets';
 ---
 
 <section class={styles.about}>
   <div class={styles.aboutContainer}>
     <h2 class={styles.aboutTitle}>Bienvenue</h2>
+    <div class={styles.textContent}>
+      <p>Depuis 2007, Mimi et Manolo vous accueillent au Michel’s, un bistrot niché au cœur du quartier Saint-Pierre à Bordeaux. Ensemble, ils ont créé un lieu où la simplicité rime avec authenticité.</p>
+
+      <div class={styles.aboutImageContainer}>
+        <img src={menuImg} alt="Carte du restaurant Michel's" class={styles.aboutImage} />
+      </div>
+
+      <p>Le Michel’s, c’est une cuisine de quartier, populaire et généreuse, où les plats mijotent et les verres se remplissent de convivialité. Ici, pas de chichi : des produits frais, une carte courte mais savoureuse, et une ambiance chaleureuse.</p>
+
+      <p>
+        Au Michel’s, on ne prend pas de réservations, mais on prend soin de vous. Que vous soyez un habitué du quartier ou un visiteur de passage, poussez la porte et laissez-vous emporter par l’atmosphère de ce lieu pas comme les autres.
+      </p>
+    </div>
   </div>
 </section>
