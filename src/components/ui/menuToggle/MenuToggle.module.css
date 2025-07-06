@@ -13,9 +13,22 @@
 			text-transform: uppercase;
 			font-size: 1.5rem;
 			font-weight: 400;
+
+			@media (width < 1024px) {
+				font-size: clamp(1rem, 0.7285rem + 1.2066vw, 1.5rem);
+			}
 		}
 
-		/* .menuToggleIcon {
-		} */
+		.menuToggleIcon {
+			transition: rotate 0.3s ease;
+
+			@media (width < 1024px) {
+				width: clamp(1.5625rem, 1.0535rem + 2.2624vw, 2.5rem);
+			}
+		}
+
+		.menuToggleClose {
+			rotate: -45deg;
+		}
 	}
 }

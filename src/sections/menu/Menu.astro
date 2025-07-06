@@ -11,7 +11,7 @@ import { menuData } from '../../data/menuData.ts';
     </h2>
     <div class={styles.menuContainer}>
       {menuData.map((category) => (
-        <MenuToggle category={category.category} items={category.items} />
+        <MenuToggle category={category.category} items={category.items} client:visible/>
       ))}
     </div>
   </div>
