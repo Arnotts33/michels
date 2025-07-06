@@ -42,7 +42,9 @@ const heroImage = "/assets/images/hero-img.webp";
       src={heroImage}
       class={styles.heroImage}
       alt="Hero Image"
-      loading="lazy"
+      fetchpriority="high"
+      decoding="async"
+      loading="eager"
       />
     </div>
   </div>

@@ -9,3 +9,8 @@ h2 {
 	color: var(--color-heading);
 	font-family: var(--font-heading);
 }
+
+p {
+	line-height: 1.6;
+	text-wrap: pretty;
+}
