@@ -7,7 +7,7 @@ type MenuToggleProps = {
 };
 
 const MenuToggle = ({ category, items }: MenuToggleProps) => {
-	const [isOpen, setIsOpen] = useState(true);
+	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<div className={styles.menuCardWrapper}>
