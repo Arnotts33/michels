@@ -1,0 +1,18 @@
+---
+import styles from './Menu.module.css';
+import MenuToggle from '../../components/ui/menuToggle/MenuToggle.tsx';
+import { menuData } from '../../data/menuData.ts';
+---
+
+<section class={styles.menu}>
+  <div class={styles.menuInner}>
+    <h2 class={styles.menuTitle}>
+      Carte
+    </h2>
+    <div class={styles.menuContainer}>
+      {menuData.map((category) => (
+        <MenuToggle category={category.category} items={category.items} />
+      ))}
+    </div>
+  </div>
+</section>

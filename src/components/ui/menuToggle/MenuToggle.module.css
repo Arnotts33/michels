@@ -1,0 +1,21 @@
+.menuCardWrapper {
+	width: 100%;
+	border: 2px solid var(--color-border);
+	border-radius: 1rem;
+	padding: 1rem;
+
+	.menuCard {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.menuTitle {
+			text-transform: uppercase;
+			font-size: 1.5rem;
+			font-weight: 400;
+		}
+
+		/* .menuToggleIcon {
+		} */
+	}
+}
