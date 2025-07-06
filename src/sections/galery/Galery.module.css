@@ -1,0 +1,17 @@
+.galery {
+	width: 50%;
+	padding: 0.5rem;
+	height: 100svh;
+
+	@media (width < 1024px) {
+		width: 100%;
+	}
+}
+
+.galeryContainer {
+	height: 100%;
+	border: 3px solid var(--color-border);
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+}

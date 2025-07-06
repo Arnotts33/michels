@@ -6,7 +6,7 @@ type MenuToggleProps = {
 	items: { name: string; price: string }[];
 };
 
-const MenuToggle = ({ category }: MenuToggleProps) => {
+const MenuToggle = ({ category, items }: MenuToggleProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
@@ -31,6 +31,20 @@ const MenuToggle = ({ category }: MenuToggleProps) => {
 					<path d="M12 5v14" />
 				</svg>
 			</div>
+
+			{isOpen && (
+				<div className={styles.menuCardContent}>
+					<ul>
+						{items.map((item, index) => (
+							<li key={index} className={styles.menuItem}>
+								<h4 className={styles.dishName}>{item.name}</h4>
+								<span className={styles.dots}></span>
+								<p className={styles.dishPrice}>{item.price}</p>
+							</li>
+						))}
+					</ul>
+				</div>
+			)}
 		</div>
 	);
 };

@@ -2,7 +2,7 @@
 	width: 100%;
 	border: 2px solid var(--color-border);
 	border-radius: 1rem;
-	padding: 1rem;
+	padding: 1rem 0.5rem;
 
 	.menuCard {
 		display: flex;
@@ -29,6 +29,36 @@
 
 		.menuToggleClose {
 			rotate: -45deg;
+		}
+	}
+
+	.menuCardContent {
+		margin-top: 2rem;
+
+		.menuItem {
+			display: grid;
+			grid-template-columns: auto 1fr auto;
+			align-items: end;
+			column-gap: 0.5rem;
+			padding: 0.5rem 0;
+			font-size: 1rem;
+		}
+
+		.dishName {
+			word-break: break-word;
+			font-size: clamp(1.25rem, 1.0833rem + 0.2604vw, 1.5rem);
+		}
+
+		.dots {
+			border-bottom: 1px dotted var(--color-border);
+			align-self: stretch;
+			height: 1em;
+			margin-block: auto;
+		}
+
+		.dishPrice {
+			white-space: nowrap;
+			font-size: clamp(1rem, 0.8333rem + 0.2604vw, 1.25rem);
 		}
 	}
 }
