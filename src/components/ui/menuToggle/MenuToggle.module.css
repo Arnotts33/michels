@@ -8,6 +8,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		cursor: pointer;
 
 		.menuTitle {
 			text-transform: uppercase;
@@ -38,27 +39,48 @@
 		.menuItem {
 			display: grid;
 			grid-template-columns: auto 1fr auto;
-			align-items: end;
+			grid-template-rows: auto auto;
+			align-items: center;
 			column-gap: 0.5rem;
-			padding: 0.5rem 0;
+			row-gap: 0.5rem;
+			padding: 0.75rem 0;
 			font-size: 1rem;
 		}
 
+		/* Première ligne */
 		.dishName {
-			word-break: break-word;
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
 			font-size: clamp(1.25rem, 1.0833rem + 0.2604vw, 1.5rem);
+			word-break: break-word;
+			align-self: flex-end;
+			text-box: cap alphabetic;
 		}
 
+		/* Points (centrés verticalement) */
 		.dots {
-			border-bottom: 1px dotted var(--color-border);
-			align-self: stretch;
-			height: 1em;
-			margin-block: auto;
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+			border-bottom: 2px dotted var(--color-border);
+			align-self: flex-end;
 		}
 
+		/* Prix à droite */
 		.dishPrice {
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
 			white-space: nowrap;
 			font-size: clamp(1rem, 0.8333rem + 0.2604vw, 1.25rem);
+			align-self: flex-end;
+			text-box: cap alphabetic;
+		}
+
+		/* Garniture (en dessous, sur toute la ligne de gauche) */
+		.dishSide {
+			grid-column: 1 / 4;
+			grid-row: 2 / 3;
+			font-size: 0.9rem;
+			color: var(--color-text);
 		}
 	}
 }

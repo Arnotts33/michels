@@ -10,14 +10,16 @@ export const menuData = [
 	{
 		category: "Les Classiques",
 		items: [
-			{ name: "Confit de canard, purée maison", price: "17,90 €" },
-			{ name: "Croque Monsieur, fites allumettes", price: "12,90 €" },
+			{ name: "Confit de canard", side: "Purée maison", price: "17,90 €" },
+			{ name: "Croque Monsieur", side: "Purée maison", price: "12,90 €" },
 			{
-				name: "Tartare de bœuf au couteau, frites allumettes",
+				name: "Tartare de bœuf",
+				side: "Purée maison",
 				price: "18,90 €",
 			},
 			{
-				name: "Belle saucisse de porc Duroc, jus, purée maison",
+				name: "Saucisse de porc",
+				side: "Purée maison",
 				price: "13,90 €",
 			},
 		],
@@ -26,21 +28,21 @@ export const menuData = [
 		category: "Petites Assiettes",
 		items: [
 			{ name: "Oeufs bio mimosa", price: "6,90 €" },
-			{ name: "Bulots, mayonnaise maison", price: "6,90 €" },
+			{ name: "Bulots", side: "Purée maison", price: "6,90 €" },
 		],
 	},
 	{
 		category: "Charcuterie & Fromages",
 		items: [
 			{ name: "Oeufs bio mimosa", price: "6,90 €" },
-			{ name: "Bulots, mayonnaise maison", price: "6,90 €" },
+			{ name: "Bulots", side: "Purée maison", price: "6,90 €" },
 		],
 	},
 	{
 		category: "A Grignoter",
 		items: [
 			{ name: "Oeufs bio mimosa", price: "6,90 €" },
-			{ name: "Bulots, mayonnaise maison", price: "6,90 €" },
+			{ name: "Bulots", side: "Purée maison", price: "6,90 €" },
 		],
 	},
 ];

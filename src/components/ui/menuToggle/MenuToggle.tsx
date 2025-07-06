@@ -3,11 +3,11 @@ import styles from "./MenuToggle.module.css";
 
 type MenuToggleProps = {
 	category: string;
-	items: { name: string; price: string }[];
+	items: { name: string; side?: string; price: string }[];
 };
 
 const MenuToggle = ({ category, items }: MenuToggleProps) => {
-	const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(true);
 
 	return (
 		<div className={styles.menuCardWrapper}>
@@ -40,6 +40,7 @@ const MenuToggle = ({ category, items }: MenuToggleProps) => {
 								<h4 className={styles.dishName}>{item.name}</h4>
 								<span className={styles.dots}></span>
 								<p className={styles.dishPrice}>{item.price}</p>
+								<p className={styles.dishSide}>{item.side}</p>
 							</li>
 						))}
 					</ul>
