@@ -1,6 +1,14 @@
 ---
 import styles from './Footer.module.css';
 const logoImg = 'assets/images/michels-logo.svg';
+const externalLinks = [
+  { href: '#', text: 'Accueil' },
+  { href: '#', text: 'Nous trouver' },
+  { href: '#', text: 'A Propos' },
+  { href: '#', text: 'Instagram' },
+  { href: '#', text: 'La Carte' },
+  { href: '#', text: 'Facebook' }
+];
 ---
 
 <footer class={styles.footer}>
@@ -16,12 +24,14 @@ const logoImg = 'assets/images/michels-logo.svg';
       </div>
       <div class={styles.linksContainer}>
         <ul class={styles.linksList}>
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">Nous trouver</a></li>
-          <li><a href="#">A Propos</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">La Carte</a></li>
-          <li><a href="#">Facebook</a></li>
+          {externalLinks.map(link => (
+            <li class={styles.linkItem}>
+              <a href={link.href} class={styles.link}>
+                {link.text}
+              </a>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrowIcon"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </li>
+          ))}
         </ul>
       </div>
       <div class={styles.infoContainer}>
