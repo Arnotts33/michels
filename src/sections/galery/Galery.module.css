@@ -30,8 +30,12 @@
 	will-change: transform;
 	animation: scroll 15s linear infinite;
 
+	@media (width < 768px) {
+		animation-duration: 25s;
+	}
+
 	.image {
-		width: 250px;
+		width: clamp(15rem, 13.875rem + 5vw, 21.875rem);
 		height: 100%;
 
 		img {
@@ -46,4 +50,8 @@
 	to {
 		transform: translateX(calc(-100% - 1rem));
 	}
+}
+
+.carousel:hover .imagesContainer {
+	animation-play-state: paused;
 }
