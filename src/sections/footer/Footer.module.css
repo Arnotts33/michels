@@ -34,6 +34,11 @@
 
 		img {
 			margin: auto;
+			width: 10rem;
+
+			@media (width < 1024px) {
+				width: clamp(6rem, 4.0088rem + 9.3704vw, 10rem);
+			}
 		}
 	}
 
