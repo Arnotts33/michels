@@ -52,6 +52,18 @@
 	}
 }
 
+@-webkit-keyframes scroll {
+	to {
+		-webkit-transform: translateX(calc(-100% - 1rem));
+	}
+}
+
+@-moz-keyframes scroll {
+	to {
+		-moz-transform: translateX(calc(-100% - 1rem));
+	}
+}
+
 .carousel:hover .imagesContainer {
 	animation-play-state: paused;
 }
