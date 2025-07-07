@@ -2,12 +2,12 @@
 import styles from './Footer.module.css';
 const logoImg = 'assets/images/michels-logo.svg';
 const externalLinks = [
-  { href: '#', text: 'Accueil' },
-  { href: '#', text: 'Nous trouver' },
-  { href: '#', text: 'A Propos' },
-  { href: '#', text: 'Instagram' },
-  { href: '#', text: 'La Carte' },
-  { href: '#', text: 'Facebook' }
+  { href: '/', target: '', text: 'Accueil' },
+  { href: 'https://maps.app.goo.gl/GshxztFuF14FQgDn7', target: '_blank', text: 'Nous trouver' },
+  { href: '#about', target: '', text: 'A Propos' },
+  { href: 'https://www.instagram.com/michels.bistro.bordeaux/?hl=fr', target: '_blank', text: 'Instagram' },
+  { href: '#menu', target: '', text: 'La Carte' },
+  { href: 'https://www.facebook.com/michels.bistro.bordeaux/?locale=fr_FR', target: '_blank', text: 'Facebook' }
 ];
 ---
 
@@ -26,7 +26,7 @@ const externalLinks = [
         <ul class={styles.linksList}>
           {externalLinks.map(link => (
             <li class={styles.linkItem}>
-              <a href={link.href} class={styles.link}>
+              <a href={link.href} class={styles.link} target={link.target} rel={link.target === '_blank' ? 'noopener noreferrer' : ''}>
                 {link.text}
               </a>
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrowIcon"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
