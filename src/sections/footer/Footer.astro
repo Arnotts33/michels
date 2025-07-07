@@ -1,0 +1,33 @@
+---
+import styles from './Footer.module.css';
+const logoImg = 'assets/images/michels-logo.svg';
+---
+
+<footer class={styles.footer}>
+  <div class={styles.footerContainer}>
+    <div class={styles.top}>
+      <h2>hello</h2>
+    </div>
+    <div class={styles.middle}>
+      <div class={styles.logoContainer}>
+        <img src={logoImg} alt="Michel's Logo" class={styles.logo} />
+      </div>
+      <div class={styles.linksContainer}>
+        <ul class={styles.linksList}>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Nous trouver</a></li>
+          <li><a href="#">A Propos</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">La Carte</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+      <div class={styles.infoContainer}>
+        <p>Ouvert tous les jours de 8h00 à minuit</p>
+      </div>
+    </div>
+    <div class={styles.bottom}>
+      <h2 class={styles.footerTitle}>Faim!</h2>
+    </div>
+  </div>
+</footer>
