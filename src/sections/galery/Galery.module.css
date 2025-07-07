@@ -1,7 +1,7 @@
 .galery {
 	width: 50%;
 	padding: 0.5rem;
-	height: 100svh;
+	/* height: 100svh; */
 
 	@media (width < 1024px) {
 		width: 100%;
@@ -14,4 +14,36 @@
 	border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
+}
+
+.carousel {
+	padding-block: 1rem;
+	display: flex;
+	gap: 1rem;
+}
+
+.imagesContainer {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	will-change: transform;
+	animation: scroll 15s linear infinite;
+
+	.image {
+		width: 250px;
+		height: 100%;
+
+		img {
+			border-radius: 0.5rem;
+			object-fit: cover;
+			height: 100%;
+		}
+	}
+}
+
+@keyframes scroll {
+	to {
+		transform: translateX(calc(-100% - 1rem));
+	}
 }

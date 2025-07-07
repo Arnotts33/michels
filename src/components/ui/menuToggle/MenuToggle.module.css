@@ -2,7 +2,7 @@
 	width: 100%;
 	border: 2px solid var(--color-border);
 	border-radius: 1rem;
-	padding: 1rem 0.5rem;
+	padding: 1rem;
 
 	.menuCard {
 		display: flex;
@@ -12,11 +12,11 @@
 
 		.menuTitle {
 			text-transform: uppercase;
-			font-size: 1.5rem;
+			font-size: 2rem;
 			font-weight: 400;
 
 			@media (width < 1024px) {
-				font-size: clamp(1rem, 0.7285rem + 1.2066vw, 1.5rem);
+				font-size: clamp(1.1rem, 0.6526rem + 2.1053vw, 2rem);
 			}
 		}
 
@@ -51,7 +51,8 @@
 		.dishName {
 			grid-column: 1 / 2;
 			grid-row: 1 / 2;
-			font-size: clamp(1.25rem, 1.0833rem + 0.2604vw, 1.5rem);
+			/* font-size: clamp(1rem, 1.0833rem + 0.2604vw, 1.5rem); */
+			font-size: 1.25rem;
 			word-break: break-word;
 			align-self: flex-end;
 			text-box: cap alphabetic;

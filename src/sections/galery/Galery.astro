@@ -3,5 +3,42 @@ import styles from './Galery.module.css';
 ---
 
 <section class={styles.galery}>
-  <div class={styles.galeryContainer}></div>
+  <div class={styles.galeryContainer}>
+    <div class={styles.carousel} >
+      <div class={styles.imagesContainer}>
+        <div class={styles.image}>
+          <img src="/assets/images/croque.webp" alt="Croque Monsieur" />
+        </div>
+        <div class={styles.image}>
+          <img src="/assets/images/facade.webp" alt="Devanture du bistrot" />
+        </div>
+        <div class={styles.image}>
+          <img src="/assets/images/morgon.webp" alt="Bouteille de vin" />
+        </div>
+        <div class={styles.image}>
+          <img src="/assets/images/salade.webp" alt="Salade composée" />
+        </div>
+        <div class={styles.image}>
+          <img src="/assets/images/terrasse.webp" alt="La terrasse du bistrot" />
+        </div>
+    </div>
+
+      <div class={styles.imagesContainer} aria-hidden="true">
+        <div class={styles.image}>
+          <img src="/assets/images/croque.webp" alt="Croque Monsieur" />
+        </div>
+        <div class={styles.image}>
+          <img src="/assets/images/facade.webp" alt="Devanture du bistrot" />
+        </div>
+        <div class={styles.image}>
+          <img src="/assets/images/morgon.webp" alt="Bouteille de vin" />
+        </div>
+        <div class={styles.image}>
+          <img src="/assets/images/salade.webp" alt="Salade composée" />
+        </div>
+        <div class={styles.image}>
+          <img src="/assets/images/terrasse.webp" alt="La terrasse du bistrot" />
+        </div>
+    </div>
+  </div>
 </section>
