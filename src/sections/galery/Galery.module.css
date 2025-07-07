@@ -28,7 +28,10 @@
 	align-items: center;
 	gap: 1rem;
 	will-change: transform;
+	-webkit-animation: scroll 15s linear infinite;
 	animation: scroll 15s linear infinite;
+	transform: translateZ(0);
+	backface-visibility: hidden;
 
 	@media (width < 768px) {
 		animation-duration: 25s;
