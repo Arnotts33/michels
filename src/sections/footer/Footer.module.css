@@ -56,7 +56,7 @@
 					font-size: clamp(1.125rem, 0.5417rem + 0.9115vw, 2rem);
 
 					@media (width < 1024px) {
-						font-size: clamp(1rem, 0.6266rem + 1.757vw, 1.75rem);
+						font-size: clamp(0.75rem, 0.2522rem + 2.3426vw, 1.75rem);
 					}
 				}
 			}
@@ -96,7 +96,7 @@
 			font-size: clamp(1rem, 0.6667rem + 0.5208vw, 1.5rem);
 
 			@media (width < 1024px) {
-				font-size: clamp(0.875rem, 0.5639rem + 1.4641vw, 1.5rem);
+				font-size: clamp(0.75rem, 0.3766rem + 1.757vw, 1.5rem);
 			}
 		}
 	}
