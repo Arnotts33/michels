@@ -34,7 +34,11 @@
 	}
 
 	.menuCardContent {
-		margin-top: 2rem;
+		overflow: hidden;
+
+		ul {
+			margin-top: 2rem;
+		}
 
 		.menuItem {
 			display: grid;

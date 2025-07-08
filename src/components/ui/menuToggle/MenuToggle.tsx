@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./MenuToggle.module.css";
 
 type MenuToggleProps = {
@@ -32,20 +33,28 @@ const MenuToggle = ({ category, items }: MenuToggleProps) => {
 				</svg>
 			</div>
 
-			{isOpen && (
-				<div className={styles.menuCardContent}>
-					<ul>
-						{items.map((item, index) => (
-							<li key={index} className={styles.menuItem}>
-								<h4 className={styles.dishName}>{item.name}</h4>
-								<span className={styles.dots}></span>
-								<p className={styles.dishPrice}>{item.price}</p>
-								<p className={styles.dishSide}>{item.side}</p>
-							</li>
-						))}
-					</ul>
-				</div>
-			)}
+			<AnimatePresence>
+				{isOpen && (
+					<motion.div
+						className={styles.menuCardContent}
+						initial={{ height: 0, opacity: 0 }}
+						animate={{ height: "auto", opacity: 1 }}
+						exit={{ height: 0, opacity: 0 }}
+						transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+					>
+						<ul>
+							{items.map((item, index) => (
+								<li key={index} className={styles.menuItem}>
+									<h4 className={styles.dishName}>{item.name}</h4>
+									<span className={styles.dots}></span>
+									<p className={styles.dishPrice}>{item.price}</p>
+									<p className={styles.dishSide}>{item.side}</p>
+								</li>
+							))}
+						</ul>
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</div>
 	);
 };
