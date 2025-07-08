@@ -1,7 +1,6 @@
 .galery {
 	width: 50%;
 	padding: 0.5rem;
-	/* height: 100svh; */
 
 	@media (width < 1024px) {
 		width: 100%;
@@ -39,12 +38,10 @@
 
 	.image {
 		width: clamp(15rem, 13.875rem + 5vw, 21.875rem);
-		/* height: clamp(25rem, 21.6667rem + 5.2083vw, 30rem); */
 
 		img {
 			border-radius: 0.5rem;
 			object-fit: cover;
-			/* height: 100%; */
 		}
 	}
 }
