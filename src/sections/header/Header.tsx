@@ -10,6 +10,24 @@ const Header = () => {
 						alt="Bistrot Michel's Logo"
 					/>
 				</a>
+				<div className={styles.burgerMenu}>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="50"
+						height="50"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						strokeWidth="2"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						className={styles.burgerMenuIcon}
+					>
+						<path d="M4 12h16" />
+						<path d="M4 18h16" />
+						<path d="M4 6h16" />
+					</svg>
+				</div>
 			</div>
 		</header>
 	);

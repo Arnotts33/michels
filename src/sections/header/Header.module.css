@@ -17,10 +17,11 @@
 		background-color: var(--color-background);
 		border: 3px solid var(--color-border);
 		border-radius: 0.75rem;
-		padding: 1rem 2rem;
+		padding: 1.5rem 3rem;
 
 		@media (width < 1024px) {
 			border-radius: 0.5rem;
+			padding: 1rem 2rem;
 		}
 	}
 
@@ -29,6 +30,20 @@
 
 		@media (width < 1024px) {
 			width: clamp(5rem, 3.2353rem + 7.8431vw, 8.25rem);
+		}
+	}
+
+	.burgerMenu {
+		cursor: pointer;
+
+		svg {
+			color: var(--color-border);
+			width: clamp(2rem, 1.44rem + 2.6354vw, 3.125rem);
+			transition: color 0.3s ease;
+
+			&:hover {
+				color: var(--color-primary);
+			}
 		}
 	}
 }
