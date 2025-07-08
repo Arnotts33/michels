@@ -96,15 +96,20 @@
 			font-size: clamp(1.25rem, 0.9286rem + 0.3571vw, 1.5rem);
 			outline-offset: 4px;
 			outline: 1px solid var(--color-primary);
+			transition: all 0.175s ease-in;
 
 			@media (width < 1024px) {
-				/* padding: 0.75rem 1.5rem; */
 				padding: clamp(0.75rem, 0.6255rem + 0.5857vw, 1rem)
 					clamp(1.5rem, 1.0022rem + 2.3426vw, 2.5rem);
 				background-color: var(--color-white);
 				color: var(--color-primary);
 				outline: 1px solid var(--color-white);
 				font-size: clamp(1rem, 0.8643rem + 0.6033vw, 1.25rem);
+			}
+
+			&:hover {
+				background-color: #5a2a2a;
+				outline-color: #5a2a2a;
 			}
 		}
 	}
