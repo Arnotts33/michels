@@ -21,6 +21,7 @@
 		}
 
 		.menuToggleIcon {
+			will-change: rotate;
 			transition: rotate 0.3s ease;
 
 			@media (width < 1024px) {

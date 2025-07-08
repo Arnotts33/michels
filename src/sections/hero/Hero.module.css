@@ -1,22 +1,23 @@
 .hero {
 	display: flex;
-	min-height: 90svh;
-	overflow: hidden;
 
-	@media (width < 769px) {
-		min-height: 100svh;
-	}
+	overflow: hidden;
 }
 
 /* Left section for the hero title and buttons */
 
 .left {
+	min-height: 90svh;
 	width: 50%;
 	padding: 0.5rem;
 
 	@media (width < 1024px) {
 		width: 100%;
 		padding: 0.25rem;
+	}
+
+	@media (width < 769px) {
+		min-height: 100svh;
 	}
 
 	.innerContainer {
@@ -58,8 +59,8 @@
 		font-size: clamp(2.5rem, -0.0714rem + 2.8571vw, 4.5rem);
 		font-weight: 700;
 		line-height: 1.5;
-		padding: 1rem;
-		margin-bottom: 1.5rem;
+		padding: 2rem;
+		/* margin-bottom: 1.5rem; */
 		text-align: center;
 		text-wrap: balance;
 
@@ -71,7 +72,7 @@
 		}
 
 		@media (width < 480px) {
-			margin-bottom: 1rem;
+			/* margin-bottom: 1rem; */
 		}
 	}
 

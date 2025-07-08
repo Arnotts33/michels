@@ -35,15 +35,5 @@
 
 	.burgerMenu {
 		cursor: pointer;
-
-		svg {
-			color: var(--color-border);
-			width: clamp(2rem, 1.44rem + 2.6354vw, 3.125rem);
-			transition: color 0.3s ease;
-
-			&:hover {
-				color: var(--color-primary);
-			}
-		}
 	}
 }

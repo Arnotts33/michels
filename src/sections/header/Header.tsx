@@ -21,11 +21,11 @@ const Header = () => {
 						strokeWidth="2"
 						strokeLinecap="round"
 						strokeLinejoin="round"
-						className={styles.burgerMenuIcon}
+						className={styles.open}
 					>
-						<path d="M4 12h16" />
-						<path d="M4 18h16" />
-						<path d="M4 6h16" />
+						<path d="M4 6h16" className={styles.topLine} />
+						<path d="M4 12h16" className={styles.middleLine} />
+						<path d="M4 18h16" className={styles.bottomLine} />
 					</svg>
 				</div>
 			</div>
