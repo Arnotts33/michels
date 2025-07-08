@@ -35,5 +35,11 @@
 
 	.burgerMenu {
 		cursor: pointer;
+
+		svg {
+			@media (width < 1024px) {
+				width: clamp(2rem, 1.44rem + 2.6354vw, 3.125rem);
+			}
+		}
 	}
 }
