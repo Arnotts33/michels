@@ -1,7 +1,7 @@
 .menuCardWrapper {
 	width: 100%;
 	border: 2px solid var(--color-border);
-	border-radius: 1rem;
+	border-radius: 0.75rem;
 	padding: 1rem;
 
 	.menuCard {
