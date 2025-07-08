@@ -16,6 +16,7 @@
 
 	@media (width < 1024px) {
 		width: 100%;
+		padding: 0.25rem;
 	}
 
 	.innerContainer {
@@ -28,7 +29,7 @@
 		align-items: center;
 
 		@media (width < 1024px) {
-			padding: 0.5rem;
+			padding: 0.25rem;
 		}
 	}
 }
@@ -49,7 +50,7 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		border-radius: 0.5rem;
+		border-radius: 0.75rem;
 	}
 
 	.heroTitle {
@@ -80,6 +81,7 @@
 
 		@media (width < 480px) {
 			margin-block: 1rem;
+			padding-bottom: 1rem;
 		}
 
 		.linkButton {
@@ -94,6 +96,9 @@
 			outline: 1px solid var(--color-primary);
 
 			@media (width < 1024px) {
+				/* padding: 0.75rem 1.5rem; */
+				padding: clamp(0.75rem, 0.6255rem + 0.5857vw, 1rem)
+					clamp(1.5rem, 1.0022rem + 2.3426vw, 2.5rem);
 				background-color: var(--color-white);
 				color: var(--color-primary);
 				outline: 1px solid var(--color-white);
@@ -115,7 +120,7 @@
 
 	.infoInner {
 		border: 2px solid var(--color-border);
-		border-radius: 1rem;
+		border-radius: 0.75rem;
 		height: 100%;
 		display: flex;
 		align-items: center;
