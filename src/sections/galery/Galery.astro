@@ -23,7 +23,7 @@ const images = [
       <div class={styles.imagesContainer} aria-hidden="true">
   {images.map((image) => (
     <div class={styles.image}>
-      <img src={image.src} alt={image.alt} />
+      <img src={image.src} alt={image.alt} loading="lazy"/>
     </div>
   ))}
 </div>
