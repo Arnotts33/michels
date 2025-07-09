@@ -7,11 +7,11 @@ import Header from '../sections/header/Header';
 import Hero from '../sections/hero/Hero.astro';
 import Keywords from '../sections/keywords/Keywords.astro';
 import Menu from '../sections/menu/Menu.astro';
-import '../styles/main.css';
+import '../styles/index.css';
 ---
 
 <Layout>
-  <Header client:load/>
+  <Header client:idle/>
   <Hero />
   <Keywords />
   <About />
