@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import styles from './Galery.module.css';
+
 const images = [
   { src: "/assets/images/croque.webp", alt: "Croque Monsieur" },
   { src: "/assets/images/facade.webp", alt: "Devanture du bistrot" },
@@ -11,23 +13,22 @@ const images = [
 
 <section class={styles.galery}>
   <div class={styles.galeryContainer}>
-    <div class={styles.carousel} >
+    <div class={styles.carousel}>
       <div class={styles.imagesContainer}>
-  {images.map((image) => (
-    <div class={styles.image}>
-      <img src={image.src} alt={image.alt} />
-    </div>
-  ))}
-</div>
+        {images.map(image => (
+          <div class={styles.image}>
+            <Image src={image.src} alt={image.alt} loading="lazy" width={350} height={500}/>
+          </div>
+        ))}
+      </div>
 
       <div class={styles.imagesContainer} aria-hidden="true">
-  {images.map((image) => (
-    <div class={styles.image}>
-      <img src={image.src} alt={image.alt} loading="lazy"/>
+        {images.map(image => (
+          <div class={styles.image}>
+            <Image src={image.src} alt={image.alt} loading="lazy" width={350} height={500}/>
+          </div>
+        ))}
+      </div>
     </div>
-  ))}
-</div>
-
-  </div>
   </div>
 </section>

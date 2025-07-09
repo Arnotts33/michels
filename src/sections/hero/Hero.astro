@@ -1,6 +1,7 @@
 ---
 import styles from './Hero.module.css';
-const heroImage = "/assets/images/hero-img.webp";
+import { Image } from 'astro:assets';
+import heroImage from "../../assets/images/hero-img.webp";
 ---
 <section class={styles.hero}>
   <div class={styles.left}>
@@ -38,14 +39,23 @@ const heroImage = "/assets/images/hero-img.webp";
     </div>
   <div class={styles.right}>
     <div class={styles.imageContainer}>
-      <img
+      <Image
+        src={heroImage}
+        class={styles.heroImage}
+        alt="Hero Image"
+        fetchpriority="high"
+        decoding="async"
+        loading="eager"
+        />
+
+      <!-- <img
       src={heroImage}
       class={styles.heroImage}
       alt="Hero Image"
       fetchpriority="high"
       decoding="async"
       loading="eager"
-      />
+      /> -->
     </div>
   </div>
 </section>
