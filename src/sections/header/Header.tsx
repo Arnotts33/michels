@@ -41,14 +41,14 @@ const Header = () => {
 					</div>
 				</div>
 
-				<AnimatePresence>
+				<AnimatePresence mode="wait">
 					{isMobileMenuOpen && (
 						<motion.nav
 							className={styles.navBar}
 							initial={{ height: 0, opacity: 0 }}
 							animate={{ height: "auto", opacity: 1 }}
 							exit={{ height: 0, opacity: 0 }}
-							transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+							transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
 						>
 							<ul
 								className={styles.navList}

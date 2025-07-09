@@ -60,6 +60,7 @@
 	}
 
 	.navBar {
+		will-change: height, opacity;
 		overflow: hidden;
 		width: 100%;
 
