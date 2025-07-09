@@ -41,7 +41,7 @@ const Header = () => {
 					</div>
 				</div>
 
-				{/* <AnimatePresence mode="wait">
+				<AnimatePresence mode="wait">
 					{isMobileMenuOpen && (
 						<motion.nav
 							className={styles.navBar}
@@ -75,7 +75,7 @@ const Header = () => {
 							</ul>
 						</motion.nav>
 					)}
-				</AnimatePresence> */}
+				</AnimatePresence>
 			</div>
 		</header>
 	);
