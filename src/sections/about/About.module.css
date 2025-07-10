@@ -4,7 +4,7 @@
 
 	@media (width < 1024px) {
 		width: 100%;
-		padding: 0.5rem 0.25rem;
+		padding: 0.25rem;
 	}
 }
 
@@ -28,7 +28,7 @@
 	text-box-edge: cap alphabetic;
 
 	@media (width < 1024px) {
-		font-size: clamp(3.5rem, -0.3009rem + 16.8929vw, 10.5rem);
+		font-size: clamp(3.5rem, -0.1659rem + 17.2515vw, 10.875rem);
 	}
 }
 
