@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+// import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -41,43 +41,41 @@ const Header = () => {
 					</div>
 				</div>
 
-				<AnimatePresence mode="wait">
-					{isMobileMenuOpen && (
-						<motion.nav
-							className={styles.navBar}
-							initial={{ height: 0, opacity: 0 }}
-							animate={{ height: "auto", opacity: 1 }}
-							exit={{ height: 0, opacity: 0 }}
-							transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-						>
-							<ul
-								className={styles.navList}
+				<nav
+					className={`${styles.navBar} ${isMobileMenuOpen ? styles.open : ""}`}
+				>
+					<ul className={styles.navList}>
+						<li>
+							<a href="/" onClick={() => setIsMobileMenuOpen(false)}>
+								Accueil
+							</a>
+						</li>
+						<li>
+							<a href="#about" onClick={() => setIsMobileMenuOpen(false)}>
+								Le Michel's
+							</a>
+						</li>
+						<li>
+							<a href="#menu" onClick={() => setIsMobileMenuOpen(false)}>
+								La Carte
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://maps.app.goo.gl/GshxztFuF14FQgDn7"
+								target="_blank"
+								rel="noopener noreferrer"
+								className={styles.linkButton}
 								onClick={() => setIsMobileMenuOpen(false)}
 							>
-								<li>
-									<a href="/">Accueil</a>
-								</li>
-								<li>
-									<a href="#about">Le Michel's</a>
-								</li>
-								<li>
-									<a href="#menu">La Carte</a>
-								</li>
-								<li>
-									<a
-										href="https://maps.app.goo.gl/GshxztFuF14FQgDn7"
-										target="_blank"
-										className={styles.linkButton}
-									>
-										Venir Chez Nous
-									</a>
-								</li>
-							</ul>
-						</motion.nav>
-					)}
-				</AnimatePresence>
+								Venir Chez Nous
+							</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</header>
 	);
 };
+
 export default Header;

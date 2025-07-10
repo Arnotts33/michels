@@ -1,7 +1,19 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: var(--color-background);
 	color: var(--color-text);
 	font-family: var(--font-body);
+}
+
+section {
+	scroll-margin-top: 8rem;
+
+	@media (width < 768px) {
+		scroll-margin-top: 6rem;
+	}
 }
 
 h1,
