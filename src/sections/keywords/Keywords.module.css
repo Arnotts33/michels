@@ -16,6 +16,7 @@
 	display: flex;
 	align-items: center;
 	height: 8.5svh;
+	padding-block: 1.75rem;
 }
 
 .keywordsScroll {
@@ -29,6 +30,7 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 1rem;
+
 		font-size: clamp(1.5rem, 0.8571rem + 0.7143vw, 2rem);
 		text-transform: uppercase;
 		animation: scroll 20s linear infinite;

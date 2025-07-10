@@ -46,7 +46,7 @@ const Header = () => {
 				>
 					<ul className={styles.navList}>
 						<li>
-							<a href="/" onClick={() => setIsMobileMenuOpen(false)}>
+							<a href="#home" onClick={() => setIsMobileMenuOpen(false)}>
 								Accueil
 							</a>
 						</li>
