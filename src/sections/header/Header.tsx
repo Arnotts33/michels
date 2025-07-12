@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Header.module.css";
 
 const Header = () => {
