@@ -6,7 +6,7 @@ const Header = () => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	const navRef = useRef<HTMLDivElement>(null);
-	const burgerRef = useRef<HTMLDivElement>(null);
+	const burgerRef = useRef<HTMLButtonElement>(null);
 
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
@@ -43,11 +43,9 @@ const Header = () => {
 						</a>
 					</div>
 
-					<div
+					<button
 						ref={burgerRef}
 						className={styles.burgerMenu}
-						aria-label="Menu"
-						aria-expanded={isMobileMenuOpen}
 						onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 					>
 						<svg
@@ -60,7 +58,7 @@ const Header = () => {
 							<rect className={styles.middleLine} />
 							<rect className={styles.bottomLine} />
 						</svg>
-					</div>
+					</button>
 				</div>
 
 				<nav
