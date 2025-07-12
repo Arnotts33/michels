@@ -129,8 +129,4 @@ export const menuData = [
 			},
 		],
 	},
-	{
-		category: "A Grignoter",
-		items: [{ name: "Frites allumettes", price: "6,90 €" }],
-	},
 ];
