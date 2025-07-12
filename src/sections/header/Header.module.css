@@ -43,18 +43,52 @@
 
 	.burgerMenu {
 		cursor: pointer;
+		border: none;
+		background: transparent;
+		fill: var(--color-border);
 
-		svg {
-			color: var(--color-border);
-			will-change: color;
-			transition: color 0.3s ease;
+		.burgerIcon {
+			width: clamp(2.1875rem, 1.8977rem + 1.3636vw, 3.125rem);
 
-			&:hover {
-				color: var(--color-primary);
+			rect {
+				x: 0;
+				rx: 0.5rem;
+				width: 100px;
+				height: 10px;
+				transform-origin: center;
+				transition: y 0.3s ease-in 0.3s, rotate 0.3s ease-in, opacity 0s 0.3s;
 			}
 
-			@media (width < 1024px) {
-				width: clamp(2rem, 1.44rem + 2.6354vw, 3.125rem);
+			.topLine {
+				y: 20px;
+			}
+
+			.middleLine {
+				y: 45px;
+			}
+
+			.bottomLine {
+				y: 70px;
+			}
+		}
+
+		.open rect {
+			transition: y 0.3s ease-in, rotate 0.3s 0.3s ease-in, opacity 0s 0.3s;
+		}
+
+		.burgerIcon.open {
+			.topLine {
+				y: 45px;
+				rotate: 45deg;
+			}
+
+			.middleLine {
+				opacity: 0;
+			}
+
+			.bottomLine {
+				y: 45px;
+				rotate: -45deg;
 			}
 		}
 	}

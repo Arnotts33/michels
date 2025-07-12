@@ -18,27 +18,23 @@ const Header = () => {
 						</a>
 					</div>
 
-					<div
+					<button
 						className={styles.burgerMenu}
+						aria-label="Menu"
+						aria-expanded={isMobileMenuOpen}
 						onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 					>
 						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="50"
-							height="50"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							strokeWidth="2"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							className={styles.open}
+							className={`${styles.burgerIcon} ${
+								isMobileMenuOpen ? styles.open : ""
+							}`}
+							viewBox="0 0 100 100"
 						>
-							<path d="M4 6h16" className={styles.topLine} />
-							<path d="M4 12h16" className={styles.middleLine} />
-							<path d="M4 18h16" className={styles.bottomLine} />
+							<rect className={styles.topLine} />
+							<rect className={styles.middleLine} />
+							<rect className={styles.bottomLine} />
 						</svg>
-					</div>
+					</button>
 				</div>
 
 				<nav
