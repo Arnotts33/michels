@@ -1,9 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Header.module.css";
 
 const Header = () => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+	const navRef = useRef<HTMLDivElement>(null);
+	const burgerRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			const target = event.target as Node;
+
+			if (
+				isMobileMenuOpen &&
+				navRef.current &&
+				!navRef.current.contains(target) &&
+				burgerRef.current &&
+				!burgerRef.current.contains(target)
+			) {
+				setIsMobileMenuOpen(false);
+			}
+		};
+
+		document.addEventListener("mousedown", handleClickOutside);
+
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, [isMobileMenuOpen]);
 
 	return (
 		<header className={styles.header}>
@@ -18,7 +43,8 @@ const Header = () => {
 						</a>
 					</div>
 
-					<button
+					<div
+						ref={burgerRef}
 						className={styles.burgerMenu}
 						aria-label="Menu"
 						aria-expanded={isMobileMenuOpen}
@@ -34,11 +60,12 @@ const Header = () => {
 							<rect className={styles.middleLine} />
 							<rect className={styles.bottomLine} />
 						</svg>
-					</button>
+					</div>
 				</div>
 
 				<nav
 					className={`${styles.navBar} ${isMobileMenuOpen ? styles.open : ""}`}
+					ref={navRef}
 				>
 					<ul className={styles.navList}>
 						<li>
