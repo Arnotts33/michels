@@ -1,8 +1,5 @@
 ---
-import Seo from '../components/SEO/Seo.astro';
 import '../styles/base/index.css';
-
-const {title, description, image, frontmatter, robots} = Astro.props;
 ---
 
 <!doctype html>
@@ -66,16 +63,10 @@ const {title, description, image, frontmatter, robots} = Astro.props;
     />
 
 		<meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Bistrot Michel's - Restaurant bistrot de quartier au coeur de Bordeaux St Pierre." />
 		<title>Bistrot Michel's</title>
 
-    <Seo
-      {title}
-      {description}
-      url={Astro.url}
-      {image}
-      {frontmatter}
-      {robots}
-    />
+
 	</head>
 	<body>
 		<slot />
