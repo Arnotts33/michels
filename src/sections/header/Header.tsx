@@ -47,6 +47,8 @@ const Header = () => {
 						ref={burgerRef}
 						className={styles.burgerMenu}
 						onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+						aria-label="Menu"
+						aria-expanded={isMobileMenuOpen}
 					>
 						<svg
 							className={`${styles.burgerIcon} ${
