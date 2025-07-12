@@ -4,7 +4,7 @@ import styles from "./MenuToggle.module.css";
 
 type MenuToggleProps = {
 	category: string;
-	items: { name: string; side?: string; price: string }[];
+	items: { name: string; side?: string; price: string; className?: string }[];
 };
 
 const MenuToggle = ({ category, items }: MenuToggleProps) => {
@@ -45,7 +45,13 @@ const MenuToggle = ({ category, items }: MenuToggleProps) => {
 						<ul>
 							{items.map((item, index) => (
 								<li key={index} className={styles.menuItem}>
-									<h4 className={styles.dishName}>{item.name}</h4>
+									<h4
+										className={`${styles.dishName} ${
+											item.className ? styles[item.className] : ""
+										}`}
+									>
+										{item.name}
+									</h4>
 									<span className={styles.dots}></span>
 									<p className={styles.dishPrice}>{item.price}</p>
 									<p className={styles.dishSide}>{item.side}</p>

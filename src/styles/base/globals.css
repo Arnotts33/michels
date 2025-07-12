@@ -30,6 +30,6 @@ h4 {
 
 p {
 	line-height: 1.6;
-	text-wrap: pretty;
+	text-wrap: balance;
 	text-box-trim: trim-both;
 }
