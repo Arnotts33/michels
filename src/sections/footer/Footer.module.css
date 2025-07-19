@@ -1,5 +1,4 @@
 .footer {
-	/* height: 70svh; */
 	width: 50%;
 	padding: 0.5rem;
 	text-align: center;
@@ -25,7 +24,6 @@
 }
 
 .middle {
-	/* border-top: 1px solid var(--color-border); */
 	border-bottom: 1px solid var(--color-border);
 
 	.logoContainer {
@@ -76,12 +74,12 @@
 				.arrowIcon {
 					width: clamp(1.25rem, 0.9389rem + 1.4641vw, 1.875rem);
 					aspect-ratio: 1 / 1;
+					transition: transform 0.15s ease-in-out;
 				}
 
 				&:hover {
 					.arrowIcon {
 						transform: translateX(0.25rem) translateY(-0.25rem);
-						transition: transform 0.2s ease-in-out;
 					}
 				}
 			}

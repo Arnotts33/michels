@@ -4,7 +4,6 @@
 
 	@media (width < 1024px) {
 		width: 100%;
-		/* height: auto; */
 		padding: 0.25rem;
 	}
 }
@@ -15,8 +14,8 @@
 	overflow: hidden;
 	display: flex;
 	align-items: center;
-	height: 8.5svh;
-	padding-block: 1.75rem;
+	min-height: 8dvh;
+	padding-block: 1rem;
 }
 
 .keywordsScroll {
@@ -30,7 +29,6 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 1rem;
-
 		font-size: clamp(1.5rem, 0.8571rem + 0.7143vw, 2rem);
 		text-transform: uppercase;
 		animation: scroll 20s linear infinite;
