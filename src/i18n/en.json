@@ -1,0 +1,36 @@
+{
+	"nav": {
+		"home": "Home",
+		"about": "Michel's",
+		"menu": "Menu",
+		"directions": "Get Directions"
+	},
+	"hero": {
+		"title": "Neighborhood bistro in the heart of Bordeaux St Pierre",
+		"buttons": {
+			"menu": "Our Menu",
+			"directions": "Get Directions"
+		},
+		"address": "15 rue du Pas-Saint-Georges",
+		"zip": "33000 Bordeaux",
+		"days": "Open 7 days a week",
+		"hours": "8:00 AM - 12:00 AM"
+	},
+	"keywords": {
+		"dishes": [
+			"French Onion Soup",
+			"Foie Gras",
+			"Roasted Camembert",
+			"Beef Tartare",
+			"Croque Monsieur",
+			"Nicoise Salad",
+			"Flank Steak"
+		]
+	},
+	"about": {
+		"title": "Welcome",
+		"text1": "Since 2007, Mimi and Manolo have been welcoming you to Michel's, a bistro nestled in the heart of the Saint-Pierre district of Bordeaux. Together, they have created a place where simplicity goes hand in hand with authenticity.",
+		"text2": "Michel's is a neighborhood bistro where the cuisine is popular and generous, with dishes simmering and glasses filling up with conviviality. Here, no fuss: fresh products, a short but tasty menu, and a warm atmosphere.",
+		"text3": "At Michel's, we don't take reservations, but we do take care of you. Whether you're a regular in the neighborhood or just passing through, step inside and let yourself be carried away by the atmosphere of this one-of-a-kind place."
+	}
+}

@@ -2,25 +2,34 @@
 import styles from './Hero.module.css';
 import { Image } from 'astro:assets';
 import heroImage from "../../assets/images/hero-img.webp";
+
+import {t} from '../../utils/i18n';
+
+export interface Props {
+  locale?: string;
+}
+
+const { locale = 'fr' } = Astro.props;
 ---
+
 <section class={styles.hero} id="home">
   <div class={styles.left}>
     <div class={styles.innerContainer}>
       <div class={styles.heroMain}>
-        <h1 class={styles.heroTitle}>Bistrot de quartier au coeur de Bordeaux St Pierre</h1>
+        <h1 class={styles.heroTitle}>{t(locale, 'hero.title')}</h1>
         <div class={styles.buttonContainer}>
-          <a href="#menu" class={styles.linkButton}>Notre Carte</a>
-          <a href="https://maps.app.goo.gl/GshxztFuF14FQgDn7" target="_blank" class={styles.linkButton}>Venir Chez Nous</a>
+          <a href="#menu" class={styles.linkButton}>{t(locale, 'hero.buttons.menu')}</a>
+          <a href="https://maps.app.goo.gl/GshxztFuF14FQgDn7" target="_blank" class={styles.linkButton}>{t(locale, 'hero.buttons.directions')}</a>
         </div>
       </div>
       <div class={styles.infoContainer}>
         <div class={styles.infoInner}>
           <div class={styles.adressContainer}>
             <p>
-              15 rue du Pas-Saint-Georges
+              {t(locale, 'hero.address')}
             </p>
             <p>
-              33000 Bordeaux
+              {t(locale, 'hero.zip')}
             </p>
           </div>
 
@@ -28,10 +37,10 @@ import heroImage from "../../assets/images/hero-img.webp";
 
           <div class={styles.hoursContainer}>
             <p class={styles.days}>
-              Ouvert 7J/7
+              {t(locale, 'hero.days')}
             </p>
             <p class={styles.hours}>
-              8h00 - 00h00
+              {t(locale, 'hero.hours')}
             </p>
           </div>
         </div>

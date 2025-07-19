@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import About from '../../sections/about/About.astro';
+import Footer from '../../sections/footer/Footer.astro';
+import Galery from '../../sections/galery/Galery.astro';
+import Header from '../../sections/header/Header';
+import Hero from '../../sections/hero/Hero.astro';
+import Keywords from '../../sections/keywords/Keywords.astro';
+import Menu from '../../sections/menu/Menu.astro';
+
+const locale = 'en';
+---
+
+<Layout locale={locale}>
+  <Header client:load/>
+  <Hero locale={locale}/>
+  <Keywords locale={locale}/>
+  <About locale={locale}/>
+  <Menu />
+  <Galery />
+  <Footer />
+</Layout>

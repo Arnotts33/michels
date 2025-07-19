@@ -1,0 +1,36 @@
+{
+	"nav": {
+		"home": "Accueil",
+		"about": "Le Michel's",
+		"menu": "La Carte",
+		"directions": "Venir chez nous"
+	},
+	"hero": {
+		"title": "Bistrot de quartier au coeur de Bordeaux St Pierre",
+		"buttons": {
+			"menu": "Notre carte",
+			"directions": "Venir chez nous"
+		},
+		"adress": "15 rue du Pas-Saint-Georges",
+		"zip": "33000 Bordeaux",
+		"days": "Ouvert 7J/7",
+		"hours": "8h00 - 00h00"
+	},
+	"keywords": {
+		"dishes": [
+			"Soupe à l'oignon",
+			"Foie gras",
+			"Camembert rôti",
+			"Tartare de boeuf",
+			"Croque Monsieur",
+			"Salade Niçoise",
+			"Bavette de boeuf"
+		]
+	},
+	"about": {
+		"title": "Bienvenue",
+		"text1": "Depuis 2007, Mimi et Manolo vous accueillent au Michel’s, un bistrot niché au cœur du quartier Saint-Pierre à Bordeaux. Ensemble, ils ont créé un lieu où la simplicité rime avec authenticité.",
+		"text2": "Le Michel’s, c’est une cuisine de quartier, populaire et généreuse, où les plats mijotent et les verres se remplissent de convivialité. Ici, pas de chichi : des produits frais, une carte courte mais savoureuse, et une ambiance chaleureuse.",
+		"text3": "Au Michel’s, on ne prend pas de réservations, mais on prend soin de vous. Que vous soyez un habitué du quartier ou un visiteur de passage, poussez la porte et laissez-vous emporter par l’atmosphère de ce lieu pas comme les autres."
+	}
+}

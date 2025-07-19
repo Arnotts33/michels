@@ -7,14 +7,18 @@ import Header from '../sections/header/Header';
 import Hero from '../sections/hero/Hero.astro';
 import Keywords from '../sections/keywords/Keywords.astro';
 import Menu from '../sections/menu/Menu.astro';
+
+const locale = 'fr';
 ---
 
-<Layout>
+<Layout locale={locale}>
   <Header client:load/>
-  <Hero />
-  <Keywords />
-  <About />
+  <Hero locale={locale}/>
+  <Keywords locale={locale}/>
+  <About locale={locale}/>
   <Menu />
   <Galery />
   <Footer />
+</Layout>
+
 </Layout>
