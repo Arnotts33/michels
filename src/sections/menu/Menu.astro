@@ -1,7 +1,10 @@
 ---
 import styles from './Menu.module.css';
 import MenuToggle from '../../components/ui/menuToggle/MenuToggle.tsx';
-import { menuData } from '../../data/menuData.ts';
+
+const { menuData } = Astro.props as {
+  menuData: { category: string; items: { name: string; description: string; price: string }[] }[];
+}
 ---
 
 <section class={styles.menu} id="menu">

@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./Header.module.css";
+import { t } from "../../utils/i18n";
 
-const Header = () => {
+const Header = ({ locale }: { locale: "en" | "fr" }) => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	const navRef = useRef<HTMLDivElement>(null);
@@ -23,9 +24,11 @@ const Header = () => {
 		};
 
 		document.addEventListener("mousedown", handleClickOutside);
+		document.addEventListener("wheel", handleClickOutside);
 
 		return () => {
 			document.removeEventListener("mousedown", handleClickOutside);
+			document.removeEventListener("wheel", handleClickOutside);
 		};
 	}, [isMobileMenuOpen]);
 
@@ -69,17 +72,17 @@ const Header = () => {
 					<ul className={styles.navList}>
 						<li>
 							<a href="#home" onClick={() => setIsMobileMenuOpen(false)}>
-								Accueil
+								{t(locale, "nav.home")}
 							</a>
 						</li>
 						<li>
 							<a href="#about" onClick={() => setIsMobileMenuOpen(false)}>
-								Le Michel's
+								{t(locale, "nav.about")}
 							</a>
 						</li>
 						<li>
 							<a href="#menu" onClick={() => setIsMobileMenuOpen(false)}>
-								La Carte
+								{t(locale, "nav.menu")}
 							</a>
 						</li>
 						<li>
@@ -90,8 +93,11 @@ const Header = () => {
 								className={styles.linkButton}
 								onClick={() => setIsMobileMenuOpen(false)}
 							>
-								Venir Chez Nous
+								{t(locale, "nav.directions")}
 							</a>
+						</li>
+						<li className={styles.language}>
+							{locale === "fr" ? <a href="/en">English</a> : ""}
 						</li>
 					</ul>
 				</nav>

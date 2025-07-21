@@ -5,11 +5,7 @@ import heroImage from "../../assets/images/hero-img.webp";
 
 import {t} from '../../utils/i18n';
 
-export interface Props {
-  locale?: string;
-}
-
-const { locale = 'fr' } = Astro.props;
+const { locale } = Astro.props;
 ---
 
 <section class={styles.hero} id="home">
@@ -26,7 +22,7 @@ const { locale = 'fr' } = Astro.props;
         <div class={styles.infoInner}>
           <div class={styles.adressContainer}>
             <p>
-              {t(locale, 'hero.address')}
+              {t(locale, 'hero.adress')}
             </p>
             <p>
               {t(locale, 'hero.zip')}
@@ -56,15 +52,9 @@ const { locale = 'fr' } = Astro.props;
         decoding="async"
         loading="eager"
         />
-
-      <!-- <img
-      src={heroImage}
-      class={styles.heroImage}
-      alt="Hero Image"
-      fetchpriority="high"
-      decoding="async"
-      loading="eager"
-      /> -->
+    </div>
+    <div class={styles.language}>
+      {locale === 'fr' ? <a href="/en">EN</a> : <a href="/">FR</a>}
     </div>
   </div>
 </section>

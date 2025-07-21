@@ -1,12 +1,17 @@
 ---
 import styles from './Footer.module.css';
 const logoImg = 'assets/images/michels-logo.svg';
+
+import {t} from '../../utils/i18n';
+
+const { locale } = Astro.props;
+
 const externalLinks = [
-  { href: '#home', target: '', text: 'Accueil' },
-  { href: 'https://maps.app.goo.gl/GshxztFuF14FQgDn7', target: '_blank', text: 'Nous trouver' },
-  { href: '#about', target: '', text: 'A Propos' },
+  { href: '#home', target: '', text: t(locale, 'footer.nav.home') },
+  { href: 'https://maps.app.goo.gl/GshxztFuF14FQgDn7', target: '_blank', text: t(locale, 'footer.nav.directions') },
+  { href: '#about', target: '', text: t(locale, 'footer.nav.about') },
   { href: 'https://www.instagram.com/michels.bistro.bordeaux/?hl=fr', target: '_blank', text: 'Instagram' },
-  { href: '#menu', target: '', text: 'La Carte' },
+  { href: '#menu', target: '', text: t(locale, 'footer.nav.menu') },
   { href: 'https://www.facebook.com/michels.bistro.bordeaux/?locale=fr_FR', target: '_blank', text: 'Facebook' }
 ];
 ---
@@ -35,7 +40,7 @@ const externalLinks = [
         </ul>
       </div>
       <div class={styles.infoContainer}>
-        <p>Ouvert tous les jours de 8h00 à minuit</p>
+        <p>{t(locale, 'footer.hours')}</p>
       </div>
     </div>
     <div class={styles.bottom}>

@@ -8,15 +8,17 @@ import Hero from '../../sections/hero/Hero.astro';
 import Keywords from '../../sections/keywords/Keywords.astro';
 import Menu from '../../sections/menu/Menu.astro';
 
-const locale = 'en';
+import {menuData} from '../../data/menuData.en.ts';
+
+const locale: 'en' | 'fr' = 'en';
 ---
 
 <Layout locale={locale}>
-  <Header client:load/>
+  <Header locale={locale} client:load/>
   <Hero locale={locale}/>
   <Keywords locale={locale}/>
   <About locale={locale}/>
-  <Menu />
+  <Menu menuData={menuData} />
   <Galery />
-  <Footer />
+  <Footer locale={locale} />
 </Layout>

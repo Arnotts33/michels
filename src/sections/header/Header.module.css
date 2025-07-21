@@ -128,6 +128,11 @@
 					}
 				}
 			}
+
+			.language {
+				font-size: clamp(1.25rem, 0.9286rem + 0.3571vw, 1.5rem);
+				color: var(--color-text);
+			}
 		}
 	}
 
