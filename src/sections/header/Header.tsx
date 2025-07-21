@@ -39,7 +39,7 @@ const Header = ({ locale }: { locale: "en" | "fr" }) => {
 					<div className={styles.logoContainer}>
 						<a href="/">
 							<img
-								src="assets/images/michels-logo.svg"
+								src="/assets/images/michels-logo.svg"
 								alt="Bistrot Michel's Logo"
 							/>
 						</a>
