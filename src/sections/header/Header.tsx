@@ -37,7 +37,7 @@ const Header = ({ locale }: { locale: "en" | "fr" }) => {
 			<div className={styles.innerHeader}>
 				<div className={styles.headerTop}>
 					<div className={styles.logoContainer}>
-						<a href="/">
+						<a href={locale === "fr" ? "/" : "/en"}>
 							<img
 								src="/assets/images/michels-logo.svg"
 								alt="Bistrot Michel's Logo"
