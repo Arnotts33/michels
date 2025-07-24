@@ -11,9 +11,15 @@ import Menu from '../../sections/menu/Menu.astro';
 import {menuData} from '../../data/menuData.en.ts';
 
 const locale: 'en' | 'fr' = 'en';
+const seoData = {
+  title: 'Bistrot Michel\'s - Authentic French Restaurant in Bordeaux',
+  description: 'Experience Bistrot Michel\'s, an authentic neighborhood restaurant in the heart of Bordeaux Saint-Pierre. Traditional French cuisine, fresh ingredients, good wines, cozy atmosphere.',
+  locale: 'en',
+  canonicalURL: 'https://bistrotmichels.com/en/'
+};
 ---
 
-<Layout locale={locale}>
+<Layout {...seoData} locale={locale}>
   <Header locale={locale} client:load/>
   <Hero locale={locale}/>
   <Keywords locale={locale}/>

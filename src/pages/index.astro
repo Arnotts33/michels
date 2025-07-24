@@ -11,9 +11,15 @@ import Menu from '../sections/menu/Menu.astro';
 import {menuData} from '../data/menuData.fr.ts';
 
 const locale: 'en' | 'fr' = 'fr';
+const seoData = {
+  title: 'Bistrot Michel\'s - Restaurant Bistrot traditionnel à Bordeaux Saint-Pierre',
+  description: 'Bistrot Michel\'s à Bordeaux, dans le quartier St-Pierre: cuisine maison, bons vins et ambiance conviviale au cœur du centre historique.',
+  locale: 'fr',
+  canonicalURL: 'https://bistrotmichels.com/'
+};
 ---
 
-<Layout locale={locale}>
+<Layout {...seoData} locale={locale}>
   <Header locale={locale}  client:load/>
   <Hero locale={locale}/>
   <Keywords locale={locale}/>
