@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import styles from './Footer.module.css';
-const logoImg = '/assets/images/michels-logo.svg';
+
+import logoImg from '../../assets/images/logo/michels-logo.svg';
 
 import {t} from '../../utils/i18n';
 
@@ -24,7 +26,7 @@ const externalLinks = [
     <div class={styles.middle}>
       <div class={styles.logoContainer}>
         <a href="/">
-          <img src={logoImg} alt="Michel's Logo" class={styles.logo} />
+          <Image src={logoImg} alt="Michel's Logo" class={styles.logo} />
         </a>
       </div>
       <div class={styles.linksContainer}>
