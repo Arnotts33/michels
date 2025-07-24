@@ -1,7 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import styles from './About.module.css';
 
-const menuImg = '/assets/images/menu-michels.webp';
+import menuImg from '../../assets/images/menu-michels.webp';
 
 import {t} from '../../utils/i18n';
 
@@ -20,7 +21,7 @@ const { locale = 'fr' } = Astro.props;
       <p>{t(locale, 'about.text1')}</p>
 
       <div class={styles.aboutImageContainer}>
-        <img src={menuImg} alt="Carte du restaurant Michel's" class={styles.aboutImage} />
+        <Image src={menuImg} alt="Carte du restaurant Michel's" class={styles.aboutImage} loading="lazy" />
       </div>
 
       <p>{t(locale, 'about.text2')}</p>
