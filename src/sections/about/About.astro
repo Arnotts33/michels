@@ -1,34 +1,36 @@
 ---
-import { Image } from 'astro:assets';
-import styles from './About.module.css';
+import { Image } from "astro:assets";
+import styles from "./About.module.css";
 
-import menuImg from '../../assets/images/menu-michels.webp';
+import menuImg from "../../assets/images/menu-michels.webp";
 
-import {t} from '../../utils/i18n';
+import { t } from "../../utils/i18n";
 
 export interface Props {
-  locale?: string;
+	locale?: string;
 }
 
-const { locale = 'fr' } = Astro.props;
-
+const { locale = "fr" } = Astro.props;
 ---
 
 <section class={styles.about} id="about">
-  <div class={styles.aboutContainer}>
-    <h2 class={styles.aboutTitle}>{t(locale, 'about.title')}</h2>
-    <div class={styles.textContent}>
-      <p>{t(locale, 'about.text1')}</p>
+	<div class={styles.aboutContainer}>
+		<h2 class={styles.aboutTitle}>{t(locale, "about.title")}</h2>
+		<div class={styles.textContent}>
+			<div class={styles.aboutImageContainer}>
+				<Image
+					src={menuImg}
+					alt="Carte du restaurant Michel's"
+					class={styles.aboutImage}
+					loading="lazy"
+				/>
+			</div>
+			<p>{t(locale, "about.text1")}</p>
+			<p>{t(locale, "about.text2")}</p>
 
-      <div class={styles.aboutImageContainer}>
-        <Image src={menuImg} alt="Carte du restaurant Michel's" class={styles.aboutImage} loading="lazy" />
-      </div>
-
-      <p>{t(locale, 'about.text2')}</p>
-
-      <p>
+			<!-- <p>
         {t(locale, 'about.text3')}
-      </p>
-    </div>
-  </div>
+      </p> -->
+		</div>
+	</div>
 </section>
