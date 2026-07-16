@@ -1,22 +1,21 @@
 ---
-import '../styles/base/index.css';
+import "../styles/base/index.css";
 
 export interface Props {
-  title?: string;
-  description?: string;
-  locale?: string;
-  canonicalURL?: string;
-  ogImage?: string;
+	title?: string;
+	description?: string;
+	locale?: string;
+	canonicalURL?: string;
+	ogImage?: string;
 }
 
 const {
-  title = 'Bistrot Michel\'s - Restaurant de quartier à Bordeaux',
-  description = 'Bistrot Michel\'s - Restaurant bistrot de quartier au coeur de Bordeaux St Pierre. Cuisine traditionnelle française, bons vins, terrasse, ambiance conviviale.',
-  locale = 'fr',
-  canonicalURL,
-  ogImage = '/assets/images/hero-img.webp',
+	title = "Bistrot Michel's - Restaurant de quartier à Bordeaux",
+	description = "Bistrot Michel's - Restaurant bistrot de quartier au coeur de Bordeaux St Pierre. Cuisine traditionnelle française, bons vins, terrasse, ambiance conviviale.",
+	locale = "fr",
+	canonicalURL,
+	ogImage = "/assets/images/hero-img.webp",
 } = Astro.props;
-
 ---
 
 <!doctype html>
@@ -24,129 +23,136 @@ const {
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-    <meta name="google-site-verification" content="s0dZianZvrfGTn2kwbdAzhkalzxOuGQY27v4xwgxYcI" />
+		<meta
+			name="google-site-verification"
+			content="s0dZianZvrfGTn2kwbdAzhkalzxOuGQY27v4xwgxYcI"
+		/>
 
-    <!-- Title & Description -->
-    <meta name="description" content={description} />
+		<!-- Title & Description -->
+		<meta name="description" content={description} />
 
-    <title>{title}</title>
+		<title>{title}</title>
 
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalURL} />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href={canonicalURL} />
+		<!-- Hreflang -->
+		<link rel="alternate" hreflang="fr" href="https://bistrotmichels.com/" />
+		<link rel="alternate" hreflang="en" href="https://bistrotmichels.com/en/" />
+		<link
+			rel="alternate"
+			hreflang="x-default"
+			href="https://bistrotmichels.com/"
+		/>
 
-    <!-- Hreflang -->
-    <link rel="alternate" hreflang="fr" href="https://bistrotmichels.com/" />
-    <link rel="alternate" hreflang="en" href="https://bistrotmichels.com/en/" />
-    <link rel="alternate" hreflang="x-default" href="https://bistrotmichels.com/" />
+		<!-- Open Graph -->
+		<meta property="og:type" content="restaurant" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:site_name" content="Bistrot Michel's" />
+		<meta property="og:locale" content={locale === "fr" ? "fr_FR" : "en_US"} />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="restaurant" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:site_name" content="Bistrot Michel's" />
-    <meta property="og:locale" content={locale === 'fr' ? 'fr_FR' : 'en_US'} />
+		<!-- Schema.org structured data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Restaurant",
+				"name": "Bistrot Michel's",
+				"description": "Bistrot Michel's - Restaurant bistrot de quartier au coeur de Bordeaux St Pierre. Cuisine traditionnelle française, bons vins, terrasse et ambiance conviviale.",
+				"url": "https://bistrotmichels.com",
+				"telephone": "+33-5-56-81-31-56",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "15 Rue du Pas Saint Georges",
+					"addressLocality": "Bordeaux",
+					"addressRegion": "Nouvelle-Aquitaine",
+					"postalCode": "33000",
+					"addressCountry": "FR"
+				},
+				"geo": {
+					"@type": "GeoCoordinates",
+					"latitude": "44.8397186",
+					"longitude": "-0.5721564"
+				},
+				"servesCuisine": "French",
+				"priceRange": "$$",
+				"openingHours": ["Tu-Su 08:00-00:00"],
+				"image": [
+					"https://bistrotmichels.com/assets/images/terrasse-table.webp",
+					"https://bistrotmichels.com/assets/images/morgon.webp",
+					"https://bistrotmichels.com/assets/images/table.webp"
+				],
+				"sameAs": [
+					"https://www.facebook.com/michels.bistro.bordeaux",
+					"https://www.instagram.com/michels.bistro.bordeaux"
+				]
+			}
+		</script>
 
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "Bistrot Michel's",
-      "description": "Bistrot Michel's - Restaurant bistrot de quartier au coeur de Bordeaux St Pierre. Cuisine traditionnelle française, bons vins, terrasse et ambiance conviviale.",
-      "url": "https://bistrotmichels.com",
-      "telephone": "+33-5-56-81-31-56",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "15 Rue du Pas Saint Georges",
-        "addressLocality": "Bordeaux",
-        "addressRegion": "Nouvelle-Aquitaine",
-        "postalCode": "33000",
-        "addressCountry": "FR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "44.8397186",
-        "longitude": "-0.5721564"
-      },
-      "servesCuisine": "French",
-      "priceRange": "$$",
-      "openingHours": [
-        "Tu-Su 08:00-00:00"
-      ],
-      "image": [
-        "https://bistrotmichels.com/assets/images/terrasse-table.webp",
-        "https://bistrotmichels.com/assets/images/morgon.webp",
-        "https://bistrotmichels.com/assets/images/table.webp"
-      ],
-      "sameAs": [
-        "https://www.facebook.com/michels.bistro.bordeaux",
-        "https://www.instagram.com/michels.bistro.bordeaux"
-      ]
-    }
-    </script>
-
-    <!-- Favicons -->
+		<!-- Favicons -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+		<link rel="icon" href="/favicon.ico" />
 
-    <!-- Sitemap -->
-    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+		<!-- Sitemap -->
+		<link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
 
-    <!-- Hero Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/assets/images/hero-img.webp"
-      type="image/webp"
-      fetchpriority="high"
-      media="(max-width: 1024px)"
-    />
+		<!-- Hero Image Preload -->
+		<link
+			rel="preload"
+			as="image"
+			href="/assets/images/hero-img.webp"
+			type="image/webp"
+			fetchpriority="high"
+			media="(max-width: 1024px)"
+		/>
 
-
-    <!-- Fonts -->
-    <link
-      rel="preload"
-      href="/assets/fonts/inter/inter-400.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/inter/inter-500.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/inter/inter-600.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/playfair/playfair-500.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/playfair/playfair-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
+		<!-- Fonts -->
+		<link
+			rel="preload"
+			href="/assets/fonts/inter/inter-400.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="/assets/fonts/inter/inter-500.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="/assets/fonts/inter/inter-600.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="/assets/fonts/playfair/playfair-500.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="/assets/fonts/playfair/playfair-700.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
 
 		<meta name="generator" content={Astro.generator} />
 
-
+		<!-- Analytics -->
+		<script
+			defer
+			src="https://analytics.arnaudlahaut.com/script.js"
+			data-website-id="78d6ee1a-1201-4771-a659-679ccbfd561d"></script>
 	</head>
 	<body>
 		<slot />
